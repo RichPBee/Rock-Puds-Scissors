@@ -1,4 +1,4 @@
-const rockBtn = document.getElementById('rock');
+const rockBtn = document.getElementById("rock");
 const display = document.querySelector('div2');
 
 rockBtn.addEventListener('click', () => {
