@@ -1,5 +1,5 @@
-const rockBtn = document.getElementById('rock');
-const display = document.querySelector('div2');
+const rockBtn = document.getElementById("rock");
+const display = document.querySelector('.div2');
 
 rockBtn.addEventListener('click', () => {
     display.innerHTML = 'Frarg';
