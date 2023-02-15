@@ -1,4 +1,5 @@
 const display = document.querySelector('.div2');
+const winBanner = document.querySelector('.div1');
 let playerChoice = '';
 
 const rockBtn = document.getElementById("rock");
@@ -31,6 +32,24 @@ const getComputerChoice = () => {
 
 const roundOfPlay = (choice1, choice2) => {
     if (choice1 === choice2) {
-        return "It's a draw"
-    }  
+        winBanner.innerHTML = "It's a draw";
+    } else if (choice1 === 'rock') {
+        if (choice2 === 'scissors') {
+            winBanner.innerHTML = 'You win!';
+        } else {
+            winBanner.innerHTML = 'Computer wins';
+        }
+    } else if (choice1 === 'scissors') {
+        if (choice2 === 'paper') {
+            winBanner.innerHTML = 'You win!';
+        } else {
+            winBanner.innerHTML = 'Computer wins';
+        }
+    } else if (choice1 === 'paper') {
+        if (choice2 === 'rock') {
+            winBanner.innerHTML = 'You win!' ;
+        } else {
+            winBanner.innerHTML = 'Computer wins'
+        }
+    }
 }
